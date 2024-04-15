@@ -123,18 +123,32 @@ const getInTouch = {
 };
 
 const experiences = {
-  show: false,
-  heading: "Experiences",
+  show: true,
+  heading: "Work Experience",
   data: [
     {
-      role: "Software Engineer",
-      companylogo: require("../assets/img/dell.png"),
-      date: "June 2018 – Present",
+      role: "Senior Software Engineer",
+      companylogo: require("../assets/img/idrc.jpeg"),
+      date: "Sep 2019 – Jun 2022",
+      url: "https://gaiamesh.com",
     },
     {
-      role: "Front-End Developer",
-      companylogo: require("../assets/img/boeing.png"),
-      date: "May 2017 – May 2018",
+      role: "Founding Software Engineer",
+      companylogo: require("../assets/img/idrc.jpeg"),
+      date: "Jan 2018 – Sep 2019",
+      url: "https://gaiamesh.com",
+    },
+    {
+      role: "Analyst",
+      companylogo: require("../assets/img/alg.jpeg"),
+      date: "Dec 2016 – Aug Jul",
+      url: "https://www.alg-global.com",
+    },
+    {
+      role: "Research Intern",
+      companylogo: require("../assets/img/disney.jpeg"),
+      date: "Summers 2015 and 206",
+      url: "https://la.disneyresearch.com/labs/",
     },
   ],
 };
