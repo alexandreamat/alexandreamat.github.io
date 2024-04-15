@@ -39,32 +39,11 @@ const Navigation = React.forwardRef((props, ref) => {
       expand="lg"
     >
       <Navbar.Brand className="navbar-brand" href={process.env.PUBLIC_URL + "/#home"}>
-        {`<${mainBody.firstName} />`}
+        {mainBody.firstName}
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggler" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="navbar-nav mr-auto">
-          {/* {
-            <NavLink className="nav-item lead">
-              <Link to={process.env.PUBLIC_URL + "/blog"}>Blog</Link>
-            </NavLink>
-          } */}
-          {repos.show && (
-
-            <NavLink
-              href={process.env.PUBLIC_URL + "/#projects"}
-            >
-              Projects
-            </NavLink>
-          )}
-          <NavLink
-            className="nav-item lead"
-            href={about.resume}
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Résumé
-          </NavLink>
           {about.show && (
             <NavLink
               className="nav-item lead"
@@ -76,11 +55,41 @@ const Navigation = React.forwardRef((props, ref) => {
           {skills.show && (
             <NavLink
               className="nav-item lead"
+              href={process.env.PUBLIC_URL + "/#experience"}
+            >
+              Experience
+            </NavLink>
+          )}
+          {repos.show && (
+
+            <NavLink
+              href={process.env.PUBLIC_URL + "/#projects"}
+            >
+              Projects
+            </NavLink>
+          )}
+          {skills.show && (
+            <NavLink
+              className="nav-item lead"
               href={process.env.PUBLIC_URL + "/#skills"}
             >
               Skills
             </NavLink>
           )}
+          <NavLink
+            className="nav-item lead"
+            href={process.env.PUBLIC_URL + "/#contact"}
+          >
+            Contact
+          </NavLink>
+          <NavLink
+            className="nav-item lead"
+            href={about.resume}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Résumé
+          </NavLink>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

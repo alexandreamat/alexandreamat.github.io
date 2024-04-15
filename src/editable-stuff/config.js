@@ -5,19 +5,25 @@ const navBar = {
 
 // Main Body SECTION
 const mainBody = {
-  gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
+  gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f",
   firstName: "Alexandre",
   middleName: "",
   lastName: "Amat",
-  message: "Senior Software Enginer",
+  messages: [
+    "Senior Software Enginer",
+    "Embedded Software Engineer",
+    "Full-stack Engineer",
+    "Back-end Engineer",
+    "Internet of Things Specialist",
+  ],
   icons: [
-    {
-      image: "fa-github",
-      url: "https://github.com/alexandreamat",
-    },
     {
       image: "fa-linkedin",
       url: "https://www.linkedin.com/in/amatalexandre/",
+    },
+    {
+      image: "fa-github",
+      url: "https://github.com/alexandreamat",
     },
   ],
 };
@@ -38,14 +44,15 @@ const mainBody = {
 
 const about = {
   show: true,
-  heading: "About Me",
+  heading: "Hi there! 👋",
   imageLink: require("../editable-stuff/headshot.png"),
   imageSize: 375,
   message: `
-    Greetings! I'm Alexandre Amat, a versatile Software Engineer driven by a
+    I'm Alexandre Amat, a Software Engineer driven by a
     passion for technical innovation and continuous learning.
     With a diverse background spanning multiple countries, cultures, and roles,
-    I bring a unique perspective to every project I undertake.`,
+    I bring a unique perspective to every project I undertake.
+  `,
   resume: require("../editable-stuff/resume.pdf"),
 };
 

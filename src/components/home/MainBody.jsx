@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Typist from 'react-typist-component';
 import { Jumbotron } from "./migration";
 
 const MainBody = React.forwardRef(
-  ({ gradient, title, message, icons }, ref) => {
+  ({ gradient, title, messages, icons }, ref) => {
+    const [messageIdx, setMessageIdx] = useState(0);
+
+    useEffect(() => {
+      const timer = setInterval(() => {
+        setMessageIdx((i) => (i + 1) % messages.length);
+      }, 3000); 
+
+      return () => clearInterval(timer);
+    }, [messages.length]);
+
     return (
       <Jumbotron
         fluid
@@ -20,10 +30,11 @@ const MainBody = React.forwardRef(
           <h1 ref={ref} className="display-1">
             {title}
           </h1>
-          <Typist>
+          <Typist key={messageIdx}>
             <div className="lead typist">
-              {message}
+              {messages[messageIdx]}
             </div>
+            <Typist.Backspace />
           </Typist>
           <div className="p-5">
             {icons.map((icon, index) => (
