@@ -93,11 +93,9 @@ const skills = {
   hardSkills: [
     { name: "Python", value: 95 },
     { name: "C", value: 95 },
-    { name: "Data Structures & Algorithms", value: 85 },
     { name: "React", value: 85 },
     { name: "C++", value: 80 },
     { name: "JavaScript/TypeScript", value: 80 },
-    { name: "Docker", value: 75 },
     { name: "SQL", value: 70 },
   ],
   softSkills: [

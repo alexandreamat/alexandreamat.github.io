@@ -1,8 +1,7 @@
 import React from "react";
-import Tab from "react-bootstrap/Tab";
-import Tabs from "react-bootstrap/Tabs";
 import SkillsTab from "./SkillsTab";
 import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col"
 import { Jumbotron } from "./migration";
 import { Container } from "react-bootstrap";
 import { useScrollPosition } from "../../hooks/useScrollPosition";
@@ -21,36 +20,21 @@ const Skills = React.forwardRef(({ heading, hardSkills, softSkills }, ref) => {
   );
   return (
     <Jumbotron ref={skillsTabRef} fluid className="bg-white m-0" id="skills">
-      <Container className="p-5 ">
-        <h2 ref={skillsTabRef} className="display-4 pb-5 text-center">
-          {heading}
-        </h2>
-        <Tabs
-          className="skills-tabs"
-          defaultActiveKey="hard-skills"
-          id="skills-tabs"
-          fill
-        >
-          <Tab
-            tabClassName="skills-tab lead"
-            eventKey="hard-skills"
-            title="Technical Skills"
-          >
-            <Row className="pt-3 px-1">
-              <SkillsTab skills={hardSkills} isScrolled={isScrolled} />
-            </Row>
-          </Tab>
-          <Tab
-            tabClassName="skills-tab lead"
-            eventKey="soft-skills"
-            title="Language Skills"
-          >
-            <Row className="pt-3 px-1">
-              <SkillsTab skills={softSkills} isScrolled={isScrolled} />
-            </Row>
-          </Tab>
-        </Tabs>
-      </Container>
+    <Container className="p-5">
+      <h2 ref={skillsTabRef} className="display-4 pb-5 text-center">
+        {heading}
+      </h2>
+      <Row>
+        <Col md={6} className="pb-4">
+          <h3>Technical Skills</h3>
+          <SkillsTab skills={hardSkills} isScrolled={isScrolled} />
+        </Col>
+        <Col md={6} className="pb-4">
+          <h3>Language Skills</h3>
+          <SkillsTab skills={softSkills} isScrolled={isScrolled} />
+        </Col>
+      </Row>
+    </Container>
     </Jumbotron>
   );
 });
